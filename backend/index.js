@@ -23,7 +23,7 @@ app.get('/api/questions/:topic', async (req, res) => {
     const topic = req.params.topic;
     try {
         // Prompt for OpenAI to generate 3 MCQs for the topic
-        const prompt = `Generate 3 multiple choice questions (MCQs) on the topic "${topic}". Format the response as a JSON array of objects, each with 'question', 'options' (array of 4), and 'answer' fields.`;
+        const prompt = `Generate 3  multiple choice questions (MCQs) on the topic "${topic}". Format the response as a JSON array of objects, each with 'question', 'options' (array of 4) Do not mention 'A','B','C'. and 'answer' fields.`;
         const response = await client.chat.completions.create({
             model: "gpt-4o",
             messages: [

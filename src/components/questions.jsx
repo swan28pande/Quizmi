@@ -28,9 +28,16 @@ const Questions = ({topic}) => {
             {/* {[...Array(3)].map((_, index) => (
                 <Question key={index} />
             ))} */}
-            {questions?(questions.map((question, index) => (
-                <Question key={index} question={question} />
-            ))):"Loading..."}
+            {questions && questions.length > 0 ? (
+                questions.map((question, index) => (
+                    <Question key={index} question={question} />
+                ))
+            ) : (
+                <div className="flex flex-col items-center justify-center py-20">
+                    <div className="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin mb-4"></div>
+                    <span className="text-blue-500 text-lg font-semibold">Loading questions...</span>
+                </div>
+            )}
         </div>
     );
 };
