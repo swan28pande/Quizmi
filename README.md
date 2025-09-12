@@ -1,12 +1,52 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Quizmi
 
-Currently, two official plugins are available:
+Quizmi is a full-stack quiz generator app built with React (frontend) and Express (backend). It uses OpenAI to generate multiple-choice questions (MCQs) for any topic you search.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Search for any topic and generate quiz questions using OpenAI
+- Select answers and get instant feedback
+- Modern UI with Tailwind CSS
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+- Node.js (v18+ recommended)
+- An OpenAI API key
+
+### Setup
+1. Clone the repository:
+	```bash
+	git clone https://github.com/swan28pande/Quizmi.git
+	cd Quizmi/quizmi
+	```
+2. Install dependencies for both frontend and backend:
+	```bash
+	npm install
+	cd backend && npm install
+	```
+3. Create a `.env` file in the `backend/` directory and add your OpenAI API key:
+	```env
+	OPENAI_API_KEY=your_openai_api_key_here
+	```
+4. Start the backend server:
+	```bash
+	cd backend
+	node index.js
+	```
+5. In a new terminal, start the frontend:
+	```bash
+	npm run dev
+	```
+
+## Usage
+1. Open [http://localhost:5173](http://localhost:5173) in your browser.
+2. Enter a topic in the search bar and click the search button.
+3. Answer the generated quiz questions!
+
+## Project Structure
+- `src/` - React frontend
+- `backend/` - Express backend with OpenAI integration
+
+## License
+MIT
