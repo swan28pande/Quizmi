@@ -34,9 +34,8 @@ app.get("/api/questions/:topic", async (req, res) => {
       const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-lite" });
       const result = await model.generateContent(prompt);
       const content = result.response.text();
-
-      // Check refusal phrase first and respond with message string
-
+    
+      // check refusal phrase first and respond with message string
       console.log(content);
       if (
         content.toLowerCase().includes("unable to provide mcqs") ||
