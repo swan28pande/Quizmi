@@ -25,16 +25,10 @@ const Searchbar = () => {
                         onChange={search}
                         value={query}
                     />
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 transition-all duration-200 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-400" onClick={() => {updateQuestions(query)}}>
+                    {/* <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 transition-all duration-200 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-400" onClick={() => {updateQuestions(query)}}>
                         🔍
-                    </button>
+                    </button> */}
                 </div>
-                {/* Uncomment if you want difficulty buttons */}
-                {/* <div className="flex justify-between w-full gap-4">
-                    <button className="flex-1 bg-green-100 rounded-lg py-2 font-medium focus:outline-3 focus:outline-blue-500">Easy</button>
-                    <button className="flex-1 bg-yellow-100 rounded-lg py-2 font-medium focus:outline-3 focus:outline-blue-500">Medium</button>
-                    <button className="flex-1 bg-red-100 rounded-lg py-2 font-medium focus:outline-3 focus:outline-blue-500">Hard</button>
-                </div> */}
             </div>
             {/* Main content with padding to prevent overlap */}
             <div className="pt-32 px-4">
