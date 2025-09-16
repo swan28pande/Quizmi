@@ -25,9 +25,9 @@ Quizmi is a full-stack quiz generator app built with React (frontend) and Expres
 	npm install
 	cd backend && npm install
 	```
-3. Create a `.env` file in the `backend/` directory and add your OpenAI API key:
+3. Create a `.env` file in the `backend/` directory and add your GEMINI API key:
 	```env
-	OPENAI_API_KEY=your_openai_api_key_here
+	GEMINI_API_KEY=your_gemini_api_key_here
 	```
 4. Start the backend server:
 	```bash
