@@ -69,7 +69,7 @@ const Questions = ({ topic }) => {
         setQuestions(prev => [...prev, ...response.data]);
       }
     } catch (error) {
-      setRefusalMsg("Error fetching more questions.");
+      setRefusalMsg("Error fetching more questions");
       console.error("Error fetching more questions:", error);
     }
     setLoading(false);
@@ -78,11 +78,11 @@ const Questions = ({ topic }) => {
   return (
     <div className="flex flex-col gap-8 items-center py-4 w-full">
       {refusalMsg ? (
-        <div className="flex flex-col items-center justify-center min-h-[30vh] w-full">
-          <div
-            className="w-full max-w-md px-8 py-6 rounded-md shadow-lg border border-yellow-400 text-yellow-600 bg-gray-900 text-center"
-            style={{ fontFamily: "FK Grotesk, sans-serif", fontWeight: 700, fontSize: "1.15rem" }}
-          >
+<div className="flex flex-col items-center justify-center min-h-[30vh] w-full">
+  <div
+    className="w-full max-w-md px-8 py-6 rounded-lg shadow-md border border-yellow-400 text-yellow-400 bg-gray-900 text-center"
+    style={{ fontFamily: "FK Grotesk, sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#EEFC7C", borderColor: "#EEFC7C" }}
+  >
             {refusalMsg}
           </div>
         </div>
