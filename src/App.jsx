@@ -12,6 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Analytics />
         <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
